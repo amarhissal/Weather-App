@@ -17,15 +17,11 @@ function greetings() {
     let p= document.querySelector(".p");
     p.innerHTML=` <img src="${image}" alt="icon" ><br>
     The Current temp in ${city_name} is ${value.main.temp}°C<br><br>
-    And Weather Condition is : ${value.weather[0].description}
-   
-    `
-       
-       
-    }).catch((e)=>{
-        let p= document.createElement("p");
-        p.innerHTML="Error Occured While Fetching API......"
-           document.body.append(p); 
+    And Weather Condition is : ${value.weather[0].description}`
+     }).catch((e)=>{
+        let p= document.querySelector(".p");
+        p.innerHTML="Oops Something Went wrong Please Enter Correct City..."
+           
     })
     
 }
